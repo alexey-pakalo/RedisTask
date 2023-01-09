@@ -1,3 +1,5 @@
+package by.pakalo.service;
+
 import redis.clients.jedis.Jedis;
 
 public class RedisExample {
