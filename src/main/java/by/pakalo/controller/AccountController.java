@@ -99,6 +99,4 @@ public class AccountController {
             return new ResponseEntity<>(HttpStatus.EXPECTATION_FAILED);
         }
     }
-
-
 }
