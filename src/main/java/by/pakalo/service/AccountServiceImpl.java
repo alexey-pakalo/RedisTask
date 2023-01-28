@@ -4,7 +4,6 @@ import by.pakalo.model.Account;
 import org.springframework.data.redis.core.HashOperations;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
-
 import javax.annotation.PostConstruct;
 import java.util.List;
 import java.util.Map;
@@ -34,7 +33,6 @@ public class AccountServiceImpl implements AccountService  {
     @Override
     public void update(Account account) {
       hashOperations.put(ACCOUNT_KEY,account.getId(),account);
-
     }
 
     @Override
