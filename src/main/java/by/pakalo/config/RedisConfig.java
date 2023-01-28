@@ -33,10 +33,6 @@ public class RedisConfig {
         JedisClientConfiguration.JedisClientConfigurationBuilder builder = JedisClientConfiguration.builder();
         builder.connectTimeout(Duration.ofMinutes(1));
         return new JedisConnectionFactory(configuration,builder.build());
-        /*JedisConnectionFactory jedisConFactory = new JedisConnectionFactory();
-        jedisConFactory.setHostName("localhost");
-        jedisConFactory.setPort(6379);
-        return jedisConFactory;*/
     }
 
     @Bean
@@ -63,10 +59,4 @@ public class RedisConfig {
         return  jsonRedisSerializer;
 
     }
- /*   @Bean
-    public RedisTemplate<String, Account> redisTemplate() {
-        RedisTemplate<String, Account> template = new RedisTemplate<>();
-        template.setConnectionFactory(jedisConnectionFactory());
-        return template;
-    }*/
 }
